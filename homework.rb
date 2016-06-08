@@ -111,20 +111,33 @@ lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'P
 # ```
 
 # 1. Return Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-print users["Jonathan"][:twitter]
+puts users["Jonathan"][:twitter]
 
 # 2. Return Erik's hometown 
-print users["Erik"][:home_town]
+puts users["Erik"][:home_town]
 
 # 3. Return the array of Erik's favorite numbers
-print users["Erik"][:favourite_numbers]
+puts users["Erik"][:favourite_numbers]
 
 # 4. Return the type of Avril's pet Colin
+puts users["Avril"][:pets]["colin"]
+
 # 5. Return the smallest of Erik's favorite numbers
-# 6. Return an array of Avril's favorite numbers that are even 
+puts users["Erik"][:favourite_numbers].min
+
+# 6. Return an array of Avril's favorite numbers that are even
+puts users["Avril"][:favourite_numbers].select {|numbers| numbers.even? }
+
 # 7. Return an array of Jonathans favourite numbers, sorted in ascending order and excluding duplicates
+
+puts users["Jonathan"][:favourite_numbers].sort.uniq
+
 # 8. Add the number `7` to Erik's favorite numbers
+users["Erik"][:favourite_numbers] << 7
+
 # 9. Change Erik's hometown to Edinburgh
+
+
 # 10. Add a pet dog to Erik called "Fluffy"
 # 11. Add yourself to the users hash
 
