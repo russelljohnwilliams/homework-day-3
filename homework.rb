@@ -6,75 +6,71 @@
 lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'Princes Street']
 # ```
 
-# # 1. Work out how many stops there are in the current west array
-# lines.length  
-# lines.count
-# lines.size
+# 1. Work out how many stops there are in the current west array
+lines.length  
+lines.count
+lines.size
 
-# # 2. Return 'Edinburgh Park' from the array
-# return lines[1]
+# 2. 'Edinburgh Park' from the array
+lines[1]
 
-# # 3. How many ways can we return 'Princes Street' from the array?
-# return lines[4]
-# return lines[-1]
-# return lines.last
-# return lines.fetch(4)
-# return lines.fetch(-1)
-# return lines.at(4)
-# return lines.at(-1)
+# 3. How many ways can we 'Princes Street' from the array?
+lines[4]
+lines[-1]
+lines.last
+lines.fetch(4)
+lines.fetch(-1)
+lines.at(4)
+lines.at(-1)
 
-# # 4. Work out the index position of 'Haymarket' 
-# lines.index("Haymarket")
+# 4. Work out the index position of 'Haymarket' 
+lines.index("Haymarket")
 
-# # 5. Add 'Airport' to the start of the array 
-# lines.unshift("Airport")
+# 5. Add 'Airport' to the start of the array 
+lines.unshift("Airport")
 
-# # 6. Add 'York Place' to the end of the array
-# lines << ("York Place")
-# lines.push ("York Place")
-# lines += ["York Place"] 
+# 6. Add 'York Place' to the end of the array
+lines << ("York Place")
+lines.push ("York Place")
+lines += ["York Place"] 
 
-# # 7. Remove 'Edinburgh Park' from the array using it's name 
-# lines.delete("Edinburgh Park")
+# 7. Remove 'Edinburgh Park' from the array using it's name 
+lines.delete("Edinburgh Park")
 
-# # 8. Delete 'Edinburgh Park' from the array by index
-# lines.delete_at(1)
+# 8. Delete 'Edinburgh Park' from the array by index
+lines.delete_at(1)
 
-# # 9. Reverse the positions of the stops in the array
-
-# puts lines.reverse
+# 9. Reverse the positions of the stops in the array
+puts lines.reverse
 
 # 10. Print out all of the stops using a for loop and a while loop
-# for stops in lines
-#   puts stops
-# end
-
-# while (index <= 4)
-#   print
+for stops in lines
+  puts stops
+end
 
 # end
 # ### B. Given the following data structure:
 
 # ```
 #   my_hash = {0 => "Zero", 1 => "One", :two => "Two", "two" => 2}
-# # ```
+# ```
 
-# # 1. How would you return the string `"One"`?
-# puts my_hash.values_at(1)
+# 1. How would you the string `"One"`?
+my_hash.values_at(1)
 
-# # 2. How would you return the string `"Two"`?
-# puts my_hash.values_at(:two)
+# 2. How would you the string `"Two"`?
+my_hash.values_at(:two)
 
-# # 3. How would you return the number `2`?
-# puts my_hash["two"]
+# 3. How would you the number `2`?
+puts my_hash["two"]
 
-# # 4. How would you add `{3 => "Three"}` to the hash? 
-# my_hash[3] = "Three"
+# 4. How would you add `{3 => "Three"}` to the hash? 
+my_hash[3] = "Three"
 
-# # 5. How would you add `{:four => 4}` to the hash? 
-# my_hash[:four] = 4
+# 5. How would you add `{:four => 4}` to the hash? 
+my_hash[:four] = 4
 
-# ### C. Given the following data structure:
+### C. Given the following data structure:
 
 # ```
   users = {
@@ -110,36 +106,49 @@ lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'P
   }
 # ```
 
-# 1. Return Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-puts users["Jonathan"][:twitter]
+# 1. Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+users["Jonathan"][:twitter]
 
-# 2. Return Erik's hometown 
-puts users["Erik"][:home_town]
+# 2. Erik's hometown 
+users["Erik"][:home_town]
 
-# 3. Return the array of Erik's favorite numbers
-puts users["Erik"][:favourite_numbers]
+# 3. the array of Erik's favorite numbers
+users["Erik"][:favourite_numbers]
 
-# 4. Return the type of Avril's pet Colin
-puts users["Avril"][:pets]["colin"]
+# 4. the type of Avril's pet Colin
+users["Avril"][:pets]["colin"]
 
-# 5. Return the smallest of Erik's favorite numbers
-puts users["Erik"][:favourite_numbers].min
+# 5. the smallest of Erik's favorite numbers
+users["Erik"][:favourite_numbers].min
 
-# 6. Return an array of Avril's favorite numbers that are even
-puts users["Avril"][:favourite_numbers].select {|numbers| numbers.even? }
+# 6. an array of Avril's favorite numbers that are even
+users["Avril"][:favourite_numbers].select {|numbers| numbers.even? }
 
-# 7. Return an array of Jonathans favourite numbers, sorted in ascending order and excluding duplicates
+# 7. an array of Jonathans favourite numbers, sorted in ascending order and excluding duplicates
 
-puts users["Jonathan"][:favourite_numbers].sort.uniq
+users["Jonathan"][:favourite_numbers].sort.uniq
 
 # 8. Add the number `7` to Erik's favorite numbers
 users["Erik"][:favourite_numbers] << 7
 
 # 9. Change Erik's hometown to Edinburgh
-
+users["Erik"][:home_town] = "Edinburgh"
 
 # 10. Add a pet dog to Erik called "Fluffy"
+users["Erik"][:pets]["fluffy"] = :dog
 # 11. Add yourself to the users hash
+
+users ["Russell"] = {:twitter => "None",
+        :favourite_numbers => [3, 9, 364, 99],
+        :home_town => "Washington",
+        :pets => {
+          "Billie" => :cat,
+          "Nico" => :cat,
+        }
+      }
+
+
+
 
 
 
